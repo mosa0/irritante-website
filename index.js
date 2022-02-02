@@ -2,28 +2,7 @@ var audio = new Audio('Sounds/Sound1.mp3');
   //audio.play();
   audio.loop = true
   
-  var btn = document.createElement('button');
-  btn.style.margin = '10px';
-  btn.innerHTML = 'The Button';
-  document.body.appendChild(btn);
-  
-  // schijf hier tussen je code
-  var button = true;
-  function myfunction(){
-      if (button === true){
-          document.body.style.backgroundColor = "yellow";
-          button = false;
-      }
-      else if (button === false) {
-          document.body.style.backgroundColor = "white";
-          button = true;
-      }
-  }
-  btn.addEventListener('click', () => {
-      myfunction()
-  })
-  var color=0
-
+   //Permission camera en microfoon
   function getLocalStream() {
     navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
         window.localStream = stream;
@@ -35,4 +14,31 @@ var audio = new Audio('Sounds/Sound1.mp3');
     
 }
 
+//Page confirm uitdoen
 getLocalStream();
+window.onbeforeunload = function (e) {
+    e = e || window.event;
+
+    // Firefox
+    if (e) {
+        e.returnValue = 'Sure?';
+    }
+
+    // Safari
+    return 'Sure?';
+};
+//cusor invisible (nog bezig)
+document.getElementById("btnClick").onclick = clickEvent;
+function clickEvent(){
+    document.getElementById("btnClick").style = 'cursor: none;'
+}
+
+//Text-To-Speech
+var tts = new SpeechSynthesisUtterance();
+tts.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+//window.speechSynthesis.speak(tts);
+
+
+function startAlertInterval(){
+    setInterval(showModal,3000)
+}
