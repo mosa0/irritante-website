@@ -80,12 +80,3 @@ body {
   color: black;
   z-index: 2;
 }
-
-.gif {
-  position: relative;
-  z-index: 2;
-  width: 50px;
-  height: auto;
-  left: 1100px;
-  top: 70px;
-}
