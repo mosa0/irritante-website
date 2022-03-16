@@ -27,18 +27,10 @@ window.onbeforeunload = function (e) {
     // Safari
     return 'Sure?';
 };
-//cusor invisible (nog bezig)
-document.getElementById("btnClick").onclick = clickEvent;
-function clickEvent(){
-    document.getElementById("btnClick").style = 'cursor: none;'
-}
-
 //Text-To-Speech
 var tts = new SpeechSynthesisUtterance();
-tts.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+tts.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 //window.speechSynthesis.speak(tts);
 
-
-function startAlertInterval(){
-    setInterval(showModal,3000)
-}
+let person = prompt("Please\n enter\n your\n name \n hurry \nNOW! \n???????????? \N!!!!!!!!!!!!!!!!", "BOOOOOOOOOOOOOOO");
+let text;

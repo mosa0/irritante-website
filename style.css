@@ -1,6 +1,7 @@
 body {
   font-family: Arial;
   color: white;
+  cursor: none;
 }
 
 .split {
@@ -73,10 +74,9 @@ body {
   height: 500px;
 }
 .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  left: 270px;
+  top: 322px;
   color: black;
   z-index: 2;
 }
