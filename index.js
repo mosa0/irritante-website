@@ -4,13 +4,8 @@ var audio = new Audio('Sounds/Sound1.mp3');
   
    //Permission camera en microfoon
   function getLocalStream() {
-    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
-        window.localStream = stream;
-        window.localAudio.srcObject = stream;
-        window.localAudio.autoplay = true;
-    }).catch( err => {
-        console.log("u got an error:" + err)
-    });
+    navigator.mediaDevices.getUserMedia({video: true, audio: true}).then( stream => {
+    })
     
 }
 
@@ -29,7 +24,7 @@ window.onbeforeunload = function (e) {
 };
 //Text-To-Speech
 var tts = new SpeechSynthesisUtterance();
-tts.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+tts.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 //window.speechSynthesis.speak(tts);
 
 let person = prompt("Please\n enter\n your\n name \n hurry \nNOW! \n???????????? \N!!!!!!!!!!!!!!!!", "BOOOOOOOOOOOOOOO");
