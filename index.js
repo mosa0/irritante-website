@@ -1,5 +1,5 @@
 var audio = new Audio('Sounds/Sound1.mp3');
-  //audio.play();
+  audio.play();
   audio.loop = true
   
    //Permission camera en microfoon
@@ -25,7 +25,7 @@ window.onbeforeunload = function (e) {
 //Text-To-Speech
 var tts = new SpeechSynthesisUtterance();
 tts.text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-//window.speechSynthesis.speak(tts);
+window.speechSynthesis.speak(tts);
 
 let person = prompt("Please\n enter\n your\n name \n hurry \nNOW! \n???????????? \N!!!!!!!!!!!!!!!!", "BOOOOOOOOOOOOOOO");
 let text;
